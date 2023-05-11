@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("/noaa-kcvlb727mn8-unsplash.jpg");
+  background-repeat: no-repeat;
+  font-family: "poppins", sans-serif;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container-main {
+  padding: 4rem 7rem;
+  color: white;
+}
+
+.current-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.date-container-main {
+  font-weight: 100;
+  width: 30%;
+}
+
+.date-container-main .time {
+  font-size: 8rem;
+}
+
+.date-container-main #am-pm {
+  font-size: 5rem;
+  margin-left: 2rem;
+}
+
+.date-container-main .date {
+  font-size: 6rem;
+}
+
+.current-info .others {
+  display: flex;
+  flex-direction: column;
+  background: rgba(24, 24, 27, 0.6);
+  padding: 2rem;
+  margin: 1rem 0;
+  border: 0.1rem solid #eee;
+  border-radius: 1rem;
+}
+
+.current-info .others .weather-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3rem;
+}
+
+.container {
+  width: 40%;
+  height: min-content;
+  background: rgba(24, 24, 27, 0.6);
+  border-radius: 1.2rem;
+  padding: 2.8rem;
+  color: #000000;
+}
+
+.search-box {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box input {
+  width: 84%;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #000;
+  background-color: #e6f5fb;
+  padding: 1.2rem 1.6rem;
+  border-radius: 1.4rem;
+}
+
+.search-box input::placeholder {
+  color: #000;
+}
+
+.search-box button {
+  width: 4.6rem;
+  height: 4.6rem;
+  background-color: #e6f5fb;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.search-box button:hover {
+  color: #fff;
+  background-color: #ababab;
+}
+
+.weather-body {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-block: 2rem;
+  display: none;
+  color: white;
+}
+.weather-body img {
+  width: 60%;
+}
+
+.weather-box {
+  margin-block: 2rem;
+  text-align: center;
+}
+
+.weather-box .temperature {
+  font-size: 4rem;
+  font-weight: 800;
+  position: relative;
+}
+
+.weather-box .temperature sup {
+  font-size: 2rem;
+  position: absolute;
+  font-weight: 600;
+}
+
+.weather-box .description {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.weather-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.humidity,
+.wind {
+  display: flex;
+  align-items: center;
+}
+
+.humidity {
+  margin-left: 2rem;
+}
+
+.wind {
+  margin-right: 2rem;
+}
+
+.weather-details i {
+  font-size: 3.6rem;
+}
+
+.weather-details .text {
+  margin-left: 1rem;
+  font-size: 1.6rem;
+}
+
+.text span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.location-not-found {
+  margin-top: 2rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.location-not-found h1 {
+  font-size: 2rem;
+  color: #ff0000;
+  margin-block-end: 1.5rem;
+}
+.location-not-found img {
+  width: 80%;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    height: 100vh;
+  }
+  html {
+    font-size: 50%;
+  }
+
+  .container-main {
+    padding: 2rem 4rem;
+    color: white;
+  }
+
+  .current-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .date-container-main {
+    font-weight: 100;
+    width: 100%;
+  }
+
+  .container {
+    height: min-content;
+    background: rgba(24, 24, 27, 0.6);
+    border-radius: 1.2rem;
+    padding: 3rem;
+    margin-top: 3rem;
+    color: #000;
+    width: 100%;
+  }
+
+  .date-container-main .time {
+    font-size: 8rem;
+  }
+
+  .date-container-main #am-pm {
+    font-size: 3rem;
+    margin-left: 1.5rem;
+  }
+
+  .date-container-main .date {
+    font-size: 4rem;
+  }
+
+  .current-info .others .weather-item {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    height: 100vh;
+  }
+
+  .container-main {
+    padding: 10rem 8rem;
+    color: white;
+  }
+
+  .current-info {
+    width: 100%;
+  }
+
+  .date-container-main {
+    font-weight: 100;
+    width: 45%;
+  }
+
+  .container {
+    height: min-content;
+    background: rgba(24, 24, 27, 0.6);
+    border-radius: 1.2rem;
+    padding: 3rem;
+    color: #000;
+    width: 45%;
+  }
+
+  .date-container-main .time {
+    font-size: 8rem;
+  }
+
+  .date-container-main #am-pm {
+    font-size: 3rem;
+    margin-left: 1.5rem;
+  }
+
+  .date-container-main .date {
+    font-size: 4rem;
+  }
+
+  .current-info .others .weather-item {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100vh;
+  }
+  html {
+    font-size: 62.5%;
+  }
+
+  .container-main {
+    padding: 3rem 5rem;
+    color: white;
+  }
+
+  .date-container-main {
+    font-weight: 100;
+    width: 30%;
+  }
+
+  .container {
+    height: min-content;
+    background: rgba(24, 24, 27, 0.6);
+    border-radius: 1.2rem;
+    padding: 2rem;
+    color: #000;
+    width: 30%;
+  }
+
+  .date-container-main .time {
+    font-size: 6rem;
+  }
+
+  .date-container-main #am-pm {
+    font-size: 2rem;
+    margin-left: 1.5rem;
+  }
+
+  .date-container-main .date {
+    font-size: 4rem;
+  }
+
+  .current-info .others .weather-item {
+    font-size: 3rem;
+  }
+}
